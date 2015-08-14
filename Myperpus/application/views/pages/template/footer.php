@@ -91,6 +91,18 @@
             $('#anggota').addClass('active').fadeIn(500);
             $("#content").fadeOut(100).load('<?php echo site_url('Page/anggota') ?>').fadeIn(500);
         });
+        $('body').on('click','.show-form',function(){
+            $('.form').slideDown();
+            $('.show-form').hide();
+            $('.data').slideUp();
+            $('.hide-form').show();
+        });
+        $('body').on('click','.hide-form',function(){
+            $('.form').slideUp();
+            $('.data').slideDown();
+            $('.hide-form').hide();
+            $('.show-form').show();
+        });
     </script>
   </body>
 </html>
