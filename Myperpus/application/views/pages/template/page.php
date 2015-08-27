@@ -1,6 +1,6 @@
 <div class="container notif" hidden>
 		<div class="alert alert-info" id="notifhapus" role="alert">
-			<strong>Pemberitahuan :</strong> Data berhasil dihapus
+			<strong>Pemberitahuan :</strong><div class="text"> Data berhasil dihapus</div>
 		</div>
 </div>
 <div class="container data">
@@ -12,21 +12,24 @@
 </div>
 <div class="container form" hidden>
 	<form class="form-horizontal" role="form">
-	  <div class="form-group">
+	  <div class="form-group" id="group-nama">
 	    <label class="control-label col-sm-2" for="email">Nama Buku:</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" placeholder="Enter email">
+	      <input type="hidden" name="id" value="" id="id_buku">
+	      <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Buku">
+	      <div class="help-block nama" style="display:none;color:red">*Wajib diisi</div>
 	    </div>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" id="group-jenis">
 	    <label class="control-label col-sm-2" for="pwd">Jenis Buku:</label>
 	    <div class="col-sm-10"> 
-	      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+	      <input type="text" name="jenis" id="jenis" class="form-control" placeholder="Jenis Buku">
+	      <div class="help-block jenis" style="display:none;color:red">*Wajib diisi</div>
 	    </div>
 	  </div>
 	  <div class="form-group"> 
 	    <div class="col-sm-offset-2 col-sm-10">
-	      <button type="submit" class="btn btn-default">Submit</button>
+	      <button type="button" onclick="insert()" class="btn btn-default value">Simpan</button>
 	    </div>
 	  </div>
 	</form>
